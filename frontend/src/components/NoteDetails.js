@@ -31,7 +31,9 @@ const NoteDetails = ({ note }) => {
       <p><strong>Description: </strong>{note.description}</p>
       <p><strong>Pinned: </strong>{note.pinned ? 'Yes' : 'No'}</p>
       <p>{formatDistanceToNow(new Date(note.createdAt), { addSuffix: true })}</p>
-      <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
+      {/* <span className="material-symbols-outlined" onClick={handleClick}>delete</span> */}
+      <button className="delete-btn" onClick={handleClick}>🗑️</button>
+
     </div>
   )
 }

@@ -48,7 +48,7 @@ const NoteForm = ()=>{
 
     return(
         <form className="create" onSubmit={handleSubmit}>
-            <h3>Add a new Workout</h3>
+            <h3>Add a new Note</h3>
 
             <label>Note Title</label>
             <input

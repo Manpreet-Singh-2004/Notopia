@@ -3,6 +3,7 @@ import { useAuthContext } from './hooks/useAuthContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Welcome from './pages/Welcome';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
               <Route
                 path='/signup'
                 element={!user ? <Signup /> : <Navigate to="/"/>}
+              />
+              <Route 
+              path='/welcome'
+              element={<Welcome />}
               />
             </Routes>
           </div>
