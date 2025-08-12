@@ -1,3 +1,4 @@
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -16,3 +17,5 @@ root.render(
     </AuthContextProvider>
   </React.StrictMode>
 );
+
+serviceWorkerRegistration.register();

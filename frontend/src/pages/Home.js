@@ -37,14 +37,16 @@ const Home = () =>{
     return(
         <div className="home">
             <div className="note">
-                {note && note.map((note) => (
-                <div key={note._id}>
-                    <NoteDetails note={note} />
-                    <hr />
-                </div>
-                ))}
-                
-            </div>
+  {note && [...note]
+    .sort((a, b) => (b.pinned === true) - (a.pinned === true))
+    .map(note => (
+      <div key={note._id}>
+        <NoteDetails note={note} />
+        <hr />
+      </div>
+    ))
+  }
+</div>
                 <NoteForm/>
         </div>
     )
