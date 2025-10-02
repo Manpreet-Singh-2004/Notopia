@@ -6,7 +6,7 @@ const requireAuth = async (req, res, next) =>{
     // verification auth
     const {authorization} = req.headers
     if(!authorization){
-        return resizeBy.status(401).json({error: "Auth token is required"})
+        return res.status(401).json({error: "Auth token is required"})
     }
     // Spliting Bearer token
     const token = authorization.split(' ')[1]
