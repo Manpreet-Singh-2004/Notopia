@@ -66,30 +66,30 @@ const NoteForm = ()=>{
             className={emptyFields.includes('description') ? 'error' : ''}
             />
 
-            <label>Pinned:</label>
-                <div>
-                <label>
-                    <input
-                    type="radio"
-                    name="pinned"
-                    value={true}
-                    checked={pinned === true}
-                    onChange={() => setPinned(true)}
-                    />
-                    Yes
-                </label>
+<label>Pinned:</label>
+<div className="radio-group">
+  <div className="radio-option">
+    <input 
+      type="radio" 
+      id="pinned-yes" 
+      name="pinned" 
+      value="yes"
+      // ... other props like onChange, checked
+    />
+    <label htmlFor="pinned-yes">Yes</label>
+  </div>
 
-                <label style={{ marginLeft: '1rem' }}>
-                    <input
-                    type="radio"
-                    name="pinned"
-                    value={false}
-                    checked={pinned === false}
-                    onChange={() => setPinned(false)}
-                    />
-                    No
-                </label>
-                </div>
+  <div className="radio-option">
+    <input 
+      type="radio" 
+      id="pinned-no" 
+      name="pinned" 
+      value="no"
+      // ... other props like onChange, checked
+    />
+    <label htmlFor="pinned-no">No</label>
+  </div>
+</div>
 
         
         <button>Add Note</button>
